@@ -1,0 +1,78 @@
+.popularSites {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 340px;
+  overflow-y: hidden;
+}
+
+.popularSites .site {
+  width: 250px;
+  height: fit-content;
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1.5px rgba(0, 0, 0, 0.3);
+}
+
+.popularSites .site:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.popularSites .site h3,
+.popularSites .site p {
+    margin-left: 10px;
+}
+
+.popularSites .site h3{
+    font-size: 17px;
+}
+
+.popularSites .site:hover h3{
+  color: orangered;
+}
+
+.popularSites .site p{
+    margin-top: -20px;
+}
+
+.popularSites .site img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.popularSites .site p .star {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 5px;
+}
+
+#popularSites{
+    margin-bottom: 15px;
+}
+
+#TourSites .header {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+
+#TourSites button {
+
+  background-color: blue;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border-radius: 12px;
+  transition: background-color .2s ease-in .2s;
+}
+
+#TourSites button:hover {
+  background-color: red;
+}

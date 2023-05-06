@@ -1,0 +1,39 @@
+.footer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    margin-top: 0;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer h3 {
+    text-align: center;
+}
+
+.footer li:hover {
+    color: blue;
+}
+
+
+.footer-section {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media(max-width:700px) {
+    .footer {
+        justify-content: start;
+    }
+}

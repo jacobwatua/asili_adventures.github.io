@@ -1,0 +1,30 @@
+@import url("./nav.css");
+@import url("./hero.css");
+@import url("./services.css");
+@import url("./tourSites.css");
+@import url("./footer.css");
+@import url('./contactForm.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Lora&family=Passion+One&family=Playfair+Display&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+h1,
+h2,
+h3{
+    color: darkblue;
+}
+
+.footer h3{
+    color: white;
+}
+
+.visible-item {
+    display: block;
+}
