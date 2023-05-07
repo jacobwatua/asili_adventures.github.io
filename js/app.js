@@ -683,6 +683,42 @@ function contactUs () {
 }
 
 
+function highlightSection() {
+  const navLinks = document.querySelectorAll('nav ul li');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    let currentSection = '';
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach((link) => {
+      const linkHref = link.querySelector('a').getAttribute('href').substring(1);
+      if (linkHref === currentSection) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        section.classList.add('current');
+      } else {
+        section.classList.remove('current');
+      }
+    });
+  });
+}
+
+
 
 
 
@@ -703,6 +739,7 @@ function main () {
         popularSites();
         contactUs();
         pageFooter();
+        highlightSection();
     });
 
     window.addEventListener('resize', () => {

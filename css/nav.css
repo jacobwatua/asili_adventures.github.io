@@ -40,7 +40,7 @@ nav:hover {
     color: black;
 }
 
-nav ul li a:hover,
+
 nav ul li:first-child a{
     color: black;
 }
@@ -126,7 +126,7 @@ nav ul li:first-child a{
         width: 90%;
     }
 }
-@media(min-width:805px){
+@media(min-width:1090px){
     #burger {
         display: none;
     }
@@ -134,7 +134,7 @@ nav ul li:first-child a{
         display: none;
     }
 }
-@media(max-width:804px) {
+@media(max-width:1089px) {
     nav ul {
         display: none;
     }

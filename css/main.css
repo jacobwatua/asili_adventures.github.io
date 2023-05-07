@@ -28,3 +28,18 @@ h3{
 .visible-item {
     display: block;
 }
+
+/*create a active class */
+nav ul li.active {
+  background-color: darkblue;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+nav ul li.active a {
+    color: white;
+}
+
+section.current {
+  background-color: #f2f2f2;
+}
