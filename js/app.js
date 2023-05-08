@@ -683,6 +683,15 @@ function contactUs () {
 }
 
 
+/**
+ * @highlightSection - highlights the current section and corresponding navigation link
+ * @description This function is used to highlight the section that is currently visible in...
+ * the viewport and its corresponding navigation link. It also adds the
+ * 'current' class to the current section and the 'active' class to the current navigation link.
+ * @param     None
+ * @return    None
+ */
+
 function highlightSection() {
   const navLinks = document.querySelectorAll('nav ul li');
   const sections = document.querySelectorAll('section');
@@ -690,9 +699,13 @@ function highlightSection() {
   window.addEventListener('scroll', () => {
     let currentSection = '';
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+      const rect = section.getBoundingClientRect();
+      if (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      ) {
         currentSection = section.getAttribute('id');
       }
     });
@@ -707,9 +720,13 @@ function highlightSection() {
     });
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+      const rect = section.getBoundingClientRect();
+      if (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      ) {
         section.classList.add('current');
       } else {
         section.classList.remove('current');
